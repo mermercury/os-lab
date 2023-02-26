@@ -1,0 +1,53 @@
+
+hellocompile:     file format elf32-tradbigmips
+
+Disassembly of section .reginfo:
+
+00400094 <.reginfo>:
+  400094:	e000000c 	sc	zero,12(zero)
+	...
+  4000a8:	10007ff0 	b	42006c <main+0x1ffbc>
+Disassembly of section .text:
+
+004000b0 <main>:
+  4000b0:	27bdffe0 	addiu	sp,sp,-32
+  4000b4:	afbe0018 	sw	s8,24(sp)
+  4000b8:	03a0f021 	move	s8,sp
+  4000bc:	24020001 	li	v0,1
+  4000c0:	afc20010 	sw	v0,16(s8)
+  4000c4:	24020002 	li	v0,2
+  4000c8:	afc2000c 	sw	v0,12(s8)
+  4000cc:	8fc30010 	lw	v1,16(s8)
+  4000d0:	8fc2000c 	lw	v0,12(s8)
+  4000d4:	00621021 	addu	v0,v1,v0
+  4000d8:	afc20008 	sw	v0,8(s8)
+  4000dc:	00001021 	move	v0,zero
+  4000e0:	03c0e821 	move	sp,s8
+  4000e4:	8fbe0018 	lw	s8,24(sp)
+  4000e8:	27bd0020 	addiu	sp,sp,32
+  4000ec:	03e00008 	jr	ra
+  4000f0:	00000000 	nop
+	...
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	00474343 	0x474343
+   4:	3a202847 	xori	zero,s1,0x2847
+   8:	4e552920 	c3	0x552920
+   c:	342e302e 	ori	t6,at,0x302e
+  10:	30202844 	andi	zero,at,0x2844
+  14:	454e5820 	0x454e5820
+  18:	454c444b 	0x454c444b
+  1c:	20342e31 	addi	s4,at,11825
+  20:	20342e30 	addi	s4,at,11824
+  24:	2e302900 	sltiu	s0,s1,10496
+Disassembly of section .pdr:
+
+00000000 <.pdr>:
+   0:	004000b0 	tge	v0,zero,0x2
+   4:	40000000 	mfc0	zero,c0_index
+   8:	fffffff8 	sdc3	$31,-8(ra)
+	...
+  14:	00000020 	add	zero,zero,zero
+  18:	0000001e 	0x1e
+  1c:	0000001f 	0x1f
